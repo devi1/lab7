@@ -1,8 +1,8 @@
 import pygame 
 pygame.init()
 
-w = 640
-h = 480
+w = 1000
+h = 1000
 
 screen = pygame.display.set_mode((w, h))
 background = pygame.Surface(screen.get_size())
@@ -10,16 +10,15 @@ background.fill((0, 0, 0))
 background = background.convert()
 screen.blit(background, (0,0))
 
-ballsurface = pygame.Surface((50,50))   
-pygame.draw.circle(ballsurface, (0,0,255), (25,25),25) 
+ballsurface = pygame.Surface((1000, 1000))   
+pygame.draw.circle(ballsurface, (255, 255, 255), (500,500),500) 
 ballsurface = ballsurface.convert() 
 #ballx = 320
 #bally = 240
-screen.blit(ballsurface, (int(w/2) - 25, int(h/2) - 25))
+screen.blit(ballsurface, (int(w/2) - 500, int(h/2) - 500))
 
 clock = pygame.time.Clock()
 
-pygame.draw.circle(background, (255, 255, 0), (int(w/2), int(h/2)), 50)
 
 activation = True
 
